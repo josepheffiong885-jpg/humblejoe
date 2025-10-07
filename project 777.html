@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HUMBLE JOE — Crypto Ambassador & Community Manager</title>
+  <meta name="description" content="Official portfolio of HUMBLE JOE, crypto ambassador, community manager, and leader." />
+  <meta property="og:title" content="HUMBLE JOE — Crypto Ambassador & Community Manager" />
+  <meta property="og:description" content="Ambassador profile, contributions, and community leadership." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#e6eef8;
+      background: linear-gradient(180deg,#071020 0%, #071728 100%);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width:1100px;margin:0 auto;padding:24px;position:relative;z-index:5 }
+
+    header {display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand {display:flex;gap:12px;align-items:center}
+    .brand img {
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--accent);
+    }
+    nav a {color:var(--muted);text-decoration:none;margin-left:18px;transition:color 0.3s}
+    nav a:hover {color:var(--accent)}
+
+    .hero {display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:center;padding:36px 0}
+    .hero h1 {font-size:40px;line-height:1.1}
+    .hero p {color:var(--muted);margin-top:12px;font-size:18px}
+    .btn {background:var(--accent);padding:12px 18px;border-radius:10px;border:none;font-weight:600;cursor:pointer;color:#042024;transition:background 0.3s}
+    .btn:hover {background:#5ad0a2}
+
+    .card {background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .muted {color:var(--muted)}
+
+    .profile-pic {
+      width:100%;
+      aspect-ratio:1/1;
+      border-radius:50%;
+      overflow:hidden;
+      background:var(--glass);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .profile-pic img {width:100%;height:100%;object-fit:cover}
+
+    .grid {display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .grid .card h3 {margin-top:0}
+
+    footer {margin-top:36px;padding:24px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    footer a {color:var(--accent);text-decoration:none;margin-left:10px;font-weight:600}
+    footer a:hover {text-decoration:underline}
+
+    @media(max-width:960px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}nav a{margin-left:10px;font-size:14px}}
+
+    /* Sprinkles */
+    #sprinkles {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    /* Floating crypto logos */
+    .floating-logo {
+      position: fixed;
+      width:120px;
+      height:120px;
+      pointer-events: none;
+      z-index: 1;
+      animation: floatY 12s infinite ease-in-out, rotateLogo 20s infinite linear;
+    }
+    .floating-logo img {
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .logo-slow { animation-duration: 18s, 40s; width:160px; height:160px; }
+    .logo-fast { animation-duration: 8s, 25s; width:100px; height:100px; }
+    .logo-medium { animation-duration: 12s, 30s; width:130px; height:130px; }
+
+    @keyframes floatY {
+      0% { transform: translateY(0px) rotate(0deg) }
+      50% { transform: translateY(-40px) rotate(180deg) }
+      100% { transform: translateY(0px) rotate(360deg) }
+    }
+    @keyframes rotateLogo {
+      from { transform: rotate(0deg) }
+      to { transform: rotate(360deg) }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="sprinkles"></canvas>
+
+  <!-- Floating crypto logos -->
+  <div class="floating-logo logo-slow" style="top:10%; left:5%">
+    <img src="bitcoin.png" alt="Bitcoin Logo">
+  </div>
+  <div class="floating-logo logo-fast" style="top:30%; left:80%">
+    <img src="solana.png" alt="Solana Logo">
+  </div>
+  <div class="floating-logo logo-medium" style="top:60%; left:20%">
+    <img src="bnb.png" alt="BNB Logo">
+  </div>
+  <div class="floating-logo logo-slow" style="top:70%; left:70%">
+    <img src="xrp.png.png" alt="XRP Logo">
+  </div>
+  <div class="floating-logo logo-fast" style="top:40%; left:40%">
+    <img src="doge.png" alt="Doge Logo">
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="profile.jpg" alt="Humble Joe">
+        <div>
+          <div style="font-weight:700">HUMBLE JOE</div>
+          <div class="small muted">Crypto Ambassador & Community Manager</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#contributions">Contributions</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>HUMBLE JOE</h1>
+        <p>Crypto Ambassador & Community Manager, builder, and advocate for blockchain adoption.</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+      </div>
+      <div class="profile-pic">
+        <img src="profile.jpg" alt="HUMBLE JOE">
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p class="muted">As a dedicated crypto ambassador and community manager, I contribute to the growth of the blockchain ecosystem through education, awareness, and grassroots community engagement. I am passionate about driving adoption and empowering individuals with the knowledge to navigate the digital economy.</p>
+    </section>
+
+    <div class="grid">
+      <div id="contributions" class="card">
+        <h3>Contributions</h3>
+        <p class="muted">Organized workshops, published educational content, and onboarded new members into the crypto community. I create accessible guides and provide mentorship to newcomers in blockchain technology.</p>
+      </div>
+      <div id="leadership" class="card">
+        <h3>Community Leadership</h3>
+        <p class="muted">I actively lead local and online communities, fostering collaboration and networking opportunities. My leadership has helped grow engaged communities that share insights, organize events, and promote inclusivity.</p>
+      </div>
+      <div class="card">
+        <h3>Vision</h3>
+        <p class="muted">My vision is to inspire others to embrace the potential of decentralized technologies and to contribute to building a sustainable and inclusive digital future.</p>
+      </div>
+    </div>
+
+    <section id="contact" class="card" style="margin-top:28px">
+      <h2>Contact</h2>
+      <p class="muted">For collaborations, partnerships, or community initiatives, feel free to reach out:</p>
+      <p><strong>Email:</strong> <a href="mailto:josepeffiong885@gmail.com">josepeffiong885@gmail.com</a></p>
+      <p><strong>Phone:</strong> 07044260987</p>
+      <p><strong>Location:</strong> Port Harcourt, Rivers State</p>
+      <p><strong>Website:</strong> <a href="http://www.humblejoe885.com" target="_blank">www.humblejoe885.com</a></p>
+      <p><strong>Twitter (X):</strong> <a href="https://x.com/HumBle_j0e" target="_blank">@HumBle_j0e</a></p>
+    </section>
+
+    <footer>
+      <div>
+        <strong>HUMBLE JOE</strong>
+        <div class="muted">Crypto Ambassador & Community Manager — Community Builder</div>
+      </div>
+      <div>
+        <a href="https://x.com/HumBle_j0e" target="_blank">Twitter</a>
+        <span class="muted">© 2025 HUMBLE JOE</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Sprinkle effect
+    const canvas = document.getElementById("sprinkles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 1,
+        d: Math.random() * 1 + 0.2
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "rgba(173,216,230,0.8)";
+      ctx.beginPath();
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        ctx.moveTo(p.x, p.y);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+      }
+      ctx.fill();
+      update();
+    }
+
+    function update() {
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.y += p.d;
+        if (p.y > canvas.height) {
+          particles[i] = {x: Math.random()*canvas.width, y:0, r:p.r, d:p.d};
+        }
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
+</body>
+</html>
